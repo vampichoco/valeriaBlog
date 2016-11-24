@@ -18,7 +18,7 @@ namespace valeria2
 
         public string text
         {
-            get { return text; }
+            get { return _text; }
             set { _text = value; }
         }
 

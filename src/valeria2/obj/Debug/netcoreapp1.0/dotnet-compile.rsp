@@ -1,5 +1,5 @@
---temp-output:C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\obj\Debug\netcoreapp1.0\
---out:C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\bin\Debug\netcoreapp1.0\valeria2.dll
+--temp-output:C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\obj\Debug\netcoreapp1.0\
+--out:C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\bin\Debug\netcoreapp1.0\valeria2.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -48,6 +48,7 @@
 --reference:C:\Users\victor\.nuget\packages\MongoDB.Bson\2.3.0\lib\netstandard1.5\MongoDB.Bson.dll
 --reference:C:\Users\victor\.nuget\packages\MongoDB.Driver\2.3.0\lib\netstandard1.5\MongoDB.Driver.dll
 --reference:C:\Users\victor\.nuget\packages\MongoDB.Driver.Core\2.3.0\lib\netstandard1.5\MongoDB.Driver.Core.dll
+--reference:C:\Users\victor\.nuget\packages\Newtonsoft.Json\9.0.1\lib\netstandard1.0\Newtonsoft.Json.dll
 --reference:C:\Users\victor\.nuget\packages\System.AppContext\4.1.0\ref\netstandard1.6\System.AppContext.dll
 --reference:C:\Users\victor\.nuget\packages\System.Buffers\4.0.0\lib\netstandard1.1\System.Buffers.dll
 --reference:C:\Users\victor\.nuget\packages\System.Collections\4.0.11\ref\netstandard1.3\System.Collections.dll
@@ -108,6 +109,7 @@
 --reference:C:\Users\victor\.nuget\packages\System.Runtime.InteropServices\4.1.0\ref\netstandard1.5\System.Runtime.InteropServices.dll
 --reference:C:\Users\victor\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
 --reference:C:\Users\victor\.nuget\packages\System.Runtime.Numerics\4.0.1\ref\netstandard1.1\System.Runtime.Numerics.dll
+--reference:C:\Users\victor\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.1\ref\netstandard1.3\System.Runtime.Serialization.Primitives.dll
 --reference:C:\Users\victor\.nuget\packages\System.Security.Claims\4.0.1\ref\netstandard1.3\System.Security.Claims.dll
 --reference:C:\Users\victor\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\netstandard1.6\System.Security.Cryptography.Algorithms.dll
 --reference:C:\Users\victor\.nuget\packages\System.Security.Cryptography.Encoding\4.0.0\ref\netstandard1.3\System.Security.Cryptography.Encoding.dll
@@ -130,8 +132,8 @@
 --reference:C:\Users\victor\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\victor\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\victor\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\obj\Debug\netcoreapp1.0\valeria2dotnet-compile.deps.json",valeria2.deps.json
-C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\HomeController.cs
-C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\post.cs
-C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\Program.cs
-C:\Users\victor\Documents\Visual Studio 2015\Projects\valeria2\src\valeria2\Startup.cs
+--resource:"C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\obj\Debug\netcoreapp1.0\valeria2dotnet-compile.deps.json",valeria2.deps.json
+C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\HomeController.cs
+C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\post.cs
+C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\Program.cs
+C:\Users\victor\Documents\GitHub\valeriaBlog\src\valeria2\Startup.cs
