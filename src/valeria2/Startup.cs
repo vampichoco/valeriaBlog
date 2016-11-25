@@ -32,9 +32,6 @@ namespace valeria2
             {
                 context.Response.ContentType = "application/json";
                 context.Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type");
-                context.Response.Headers.Add("Access-Control-Allow-Origin", "null");
-
-                //await HomeController.hello(context); 
 
                 HomeController.Valeria();
                 await HomeController.proccess(context);

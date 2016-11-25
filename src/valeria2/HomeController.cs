@@ -30,13 +30,16 @@ namespace valeria2
             _client = new MongoClient();
             _dataBase = _client.GetDatabase("test");
 
-            
-
-            var collection = _dataBase.GetCollection<BsonDocument>("vdb");
+            var collection = _dataBase.GetCollection<BsonDocument>("vdb1");
             var filter = new BsonDocument();
             var posts = new List<post>();
 
-            var result = collection.Find(filter).ToList();
+            BsonDocument sort = new BsonDocument
+            {
+                {"date", -1 }
+            };
+
+            var result = collection.Find(filter).Sort(sort).ToList();
 
             foreach (BsonDocument item in result)
             {
@@ -61,14 +64,15 @@ namespace valeria2
                 _client = new MongoClient();
                 _dataBase = _client.GetDatabase("test");
 
-                var collection = _dataBase.GetCollection<BsonDocument>("vdb");
+                var collection = _dataBase.GetCollection<BsonDocument>("vdb1");
 
                 JObject j = JObject.Parse(ipString);
 
                 BsonDocument doc = new BsonDocument
                 {
                     {"title", j["title"].ToString() },
-                    {"text" , j["text"].ToString()  }
+                    {"text" , j["text"].ToString()  },
+                    {"date" , DateTime.Now           }
                 };
 
                 collection.InsertOne(doc);
@@ -76,26 +80,6 @@ namespace valeria2
                 var res = new { Message = "Entrada creada :D" };
                 ctx.Response.WriteAsync(JsonConvert.SerializeObject(res));
             }
-
-            //Dim j As JObject = JObject.Parse(inputString)
-
-
-
-
-
-            //Console.WriteLine(ipString);
-            //Console.WriteLine(ipString);
-
-
-
-            //JToken tok = JToken.Parse(ipString);
-
-            //Console.WriteLine(ipString);
-
-            //dynamic dynOb = JsonConvert.DeserializeObject(ipString);
-
-            //onsole.WriteLine(dynOb.ToString());
-
             
         }
 
