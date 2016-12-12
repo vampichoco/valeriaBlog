@@ -37,7 +37,7 @@ namespace valeria2{
 
             BsonDocument doc = new BsonDocument
                 {
-                    {"id", id.ToString()},
+                    {"id", id},
                     {"Directory", dir},
                     {"Author", author}, 
                     {"DateCreated", System.DateTime.Now}, 
