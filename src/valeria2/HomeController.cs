@@ -175,6 +175,29 @@ namespace valeria2
                 createUser(nickname, email, password);
 
             }
+        } 
+
+        public static void home(HttpContext ctx)
+        {
+            _client = new MongoClient();
+            _dataBase = _client.GetDatabase("test");
+
+            var collection = _dataBase.GetCollection<BsonDocument>("filesystem");
+            var filter = Builders<BsonDocument>.Filter.Eq("Name", "home");
+
+            var result = collection.Find(filter).SingleOrDefault();
+
+           if (result != null)
+            {
+                var content = result.GetValue("ContentData").ToString();
+
+                ctx.Response.ContentType = "text/html";
+                ctx.Response.WriteAsync(content);
+            }else
+            {
+                ctx.Response.WriteAsync("Home content not found");
+            }
+
         }
 
         public static void Valeria()
@@ -182,7 +205,7 @@ namespace valeria2
             controllers = new Dictionary<string, Action<HttpContext>>();
 
             controllers.Add("/sandra" , (ctx) => ctx.Response.WriteAsync("This is a controller"             ));
-            controllers.Add("/"       , (ctx) => ctx.Response.WriteAsync("This is the home controller"      ));
+            controllers.Add("/", home);
             controllers.Add("/valeria", (ctx) => ctx.Response.WriteAsync("This is the 'valeria' controller" ));
             controllers.Add("/blog"   , blog                                                                 );
             controllers.Add("/upload" , upload                                                               );

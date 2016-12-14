@@ -1,7 +1,7 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/eskimo/.nuget/packages"
+      "C:\\Users\\victor\\.nuget\\packages"
     ]
   }
 }
